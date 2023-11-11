@@ -10,7 +10,7 @@ int main()
     string str = "hello there!";
     string * pe = &str;
 
-    char message [] = "hello there!";
+    char message [] = str;
 
     cout << &str << " " << *pe << endl;
 
