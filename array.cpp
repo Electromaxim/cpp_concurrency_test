@@ -9,7 +9,7 @@ using namespace std;
 
 int main()
 {
-std::ofstream ofs("filename");
+ofstream ofs("sourcename");
 
     // create class instance
     const gps_position g(0, 0, 0.0f);
@@ -22,11 +22,11 @@ std::ofstream ofs("filename");
     	// archive and stream closed when destructors are called
     }
 
-    // ... some time later restore the class instance to its orginal state
+    // ... then restore the class instance to its orginal state
     gps_position newg;
     {
         // create and open an archive for input
-        std::ifstream ifs("filename");
+        ifstream ifs("sourcename");
         boost::archive::text_iarchive ia(ifs);
         // read class state from archive
         ia >> newg;
